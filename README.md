@@ -14,7 +14,8 @@ A lightweight Android auto-clicker app. Record tap sequences and replay them aut
 
 Download the latest APK from the [releases](releases/) folder:
 
-- [autocrypt-v1.1.apk](releases/autocrypt-v1.1.apk) - Latest version
+- [autocrypt-v1.2.apk](releases/autocrypt-v1.2.apk) - Latest version (countdown timer + credits)
+- [autocrypt-v1.1.apk](releases/autocrypt-v1.1.apk) - Previous version
 
 ## Installation
 
