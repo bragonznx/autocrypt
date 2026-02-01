@@ -1,0 +1,6 @@
+# Everything except releases and docs
+*
+!.gitignore
+!README.md
+!releases/
+!releases/*.apk
