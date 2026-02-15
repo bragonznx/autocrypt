@@ -41,9 +41,11 @@ ADB (Android Debug Bridge) is a tool that lets you grant special permissions to 
    - Windows: Download and run [adb-setup-windows.bat](adb-setup-windows.bat)
    - Mac/Linux: Download and run [adb-setup-mac-linux.sh](adb-setup-mac-linux.sh)
 
-   Or manually run:
+   Or manually run these 3 commands:
    ```bash
    adb shell pm grant com.autocrypt android.permission.WRITE_SECURE_SETTINGS
+   adb shell settings put secure enabled_accessibility_services com.autocrypt/.AutoClickAccessibilityService
+   adb shell settings put secure accessibility_enabled 1
    ```
 
 5. **Verify** in Autocrypt app by tapping "Test Permission"

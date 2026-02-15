@@ -15,9 +15,19 @@ android {
         versionName = "1.4"
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = file("/home/bragon/autocrypt-debug.keystore")
+            storePassword = "android"
+            keyAlias = "autocrypt"
+            keyPassword = "android"
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
+            signingConfig = signingConfigs.getByName("release")
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }

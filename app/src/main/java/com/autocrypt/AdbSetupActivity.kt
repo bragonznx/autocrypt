@@ -24,6 +24,8 @@ class AdbSetupActivity : AppCompatActivity() {
 
     private val adbCommand = """
         adb shell pm grant com.autocrypt android.permission.WRITE_SECURE_SETTINGS
+        adb shell settings put secure enabled_accessibility_services com.autocrypt/.AutoClickAccessibilityService
+        adb shell settings put secure accessibility_enabled 1
     """.trimIndent()
 
     override fun onCreate(savedInstanceState: Bundle?) {
