@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#1a1a1a">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Samsung Knox Setup"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚠️ Samsung Knox Detected"
+            android:textSize="16sp"
+            android:textColor="#FFAA00"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvAdbInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Samsung Knox blocks standard accessibility permissions. To use Autocrypt on your Samsung device, you need to grant permissions via ADB (Android Debug Bridge).\n\nThis is a one-time setup:\n\n1. Enable Developer Options:\n   • Go to Settings > About Phone\n   • Tap 'Build Number' 7 times\n\n2. Enable USB Debugging:\n   • Go to Settings > Developer Options\n   • Enable 'USB Debugging'\n\n3. Connect to PC:\n   • Install ADB on your computer\n   • Connect phone via USB cable\n   • Accept USB debugging prompt on phone\n\n4. Run ADB Command:\n   • Copy the command below\n   • Open terminal/command prompt\n   • Paste and run the command\n\n5. Verify:\n   • Tap 'Test Permission' button below\n   • If successful, continue to main app"
+            android:textSize="14sp"
+            android:textColor="#CCCCCC"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ADB Command:"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvAdbCommand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="12sp"
+            android:textColor="#00FF00"
+            android:background="#2a2a2a"
+            android:padding="12dp"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnCopyCommand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Copy Command"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4CAF50"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnOpenDeveloperSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Open Developer Settings"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2196F3"
+            android:layout_marginBottom="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#444444"
+            android:layout_marginVertical="16dp"/>
+
+        <TextView
+            android:id="@+id/tvPermissionStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="✗ ADB Permission Not Granted"
+            android:textSize="16sp"
+            android:textColor="#AA0000"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnTestPermission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Permission"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF9800"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Continue to App"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4CAF50"
+            android:enabled="false"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Note: You only need to do this setup once. After granting ADB permission, you can disconnect your phone from the PC."
+            android:textSize="12sp"
+            android:textColor="#888888"
+            android:gravity="center"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

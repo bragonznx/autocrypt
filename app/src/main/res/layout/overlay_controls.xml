@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#CC000000"
+    android:padding="4dp">
+
+    <!-- Recording count badge -->
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="35dp"
+        android:layout_height="16dp"
+        android:text="0"
+        android:textColor="#FF0000"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="#33FF0000"
+        android:visibility="gone" />
+
+    <!-- SAVE button - Only visible during recording -->
+    <ImageButton
+        android:id="@+id/btnSave"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/btn_save_bg"
+        android:src="@drawable/ic_save"
+        android:scaleType="centerInside"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        android:contentDescription="Save position" />
+
+    <!-- RECORD button - Red circle -->
+    <ImageButton
+        android:id="@+id/btnRecord"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/btn_record_bg"
+        android:src="@drawable/ic_record"
+        android:scaleType="centerInside"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="Record" />
+
+    <!-- PLAY button - Green with white triangle -->
+    <ImageButton
+        android:id="@+id/btnPlay"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/btn_play_bg"
+        android:src="@drawable/ic_play"
+        android:scaleType="centerInside"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="5dp"
+        android:contentDescription="Play" />
+
+    <!-- SETTINGS button - Gear -->
+    <ImageButton
+        android:id="@+id/btnSettings"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/btn_settings_bg"
+        android:src="@drawable/ic_settings"
+        android:scaleType="centerInside"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="5dp"
+        android:contentDescription="Settings" />
+
+    <!-- Countdown timer (visible during playback pause) -->
+    <TextView
+        android:id="@+id/tvCountdown"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#00AAFF"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="2dp"
+        android:visibility="gone" />
+
+</LinearLayout>

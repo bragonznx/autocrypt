@@ -1,6 +1,40 @@
-# Everything except releases and docs
-*
+# Build outputs
+.gradle/
+build/
+local.properties
+*.iml
+.idea/
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/
+
+# APK build artifacts (keep releases)
+app/build/
+app/release/
+
+# Gradle distribution
+gradle-8.5/
+
+# Temporary and backup files
+*.sh~
+autocrypt.sh
+mouserecord
+
+# Gradle wrapper jar (keep scripts)
+gradle/wrapper/*.jar
+
+# But keep these important files
 !.gitignore
 !README.md
-!releases/
 !releases/*.apk
+!app/
+!app/src/
+!app/src/**/*
+!app/build.gradle.kts
+!app/proguard-rules.pro
+!build.gradle.kts
+!settings.gradle.kts
+!gradle.properties
+!adb-setup-windows.bat
+!adb-setup-mac-linux.sh

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#1a1a1a">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Autocrypt"
+        android:textSize="32sp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auto-clicker for Total Battle"
+        android:textSize="14sp"
+        android:textColor="#888888"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Permissions Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1. Permissions"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/btnOverlayPermission"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Overlay Permission" />
+
+        <TextView
+            android:id="@+id/tvOverlayStatus"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Not granted"
+            android:textColor="#AA0000"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
+
+        <Button
+            android:id="@+id/btnAccessibilityPermission"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Accessibility Service" />
+
+        <TextView
+            android:id="@+id/tvAccessibilityStatus"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Not enabled"
+            android:textColor="#AA0000"
+            android:gravity="center"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <!-- Settings Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2. Settings"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Repetitions:"
+            android:textColor="#cccccc"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical" />
+
+        <EditText
+            android:id="@+id/etRepetitions"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="10"
+            android:textColor="#ffffff"
+            android:backgroundTint="#666666"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Delay between cycles (sec):"
+            android:textColor="#cccccc"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical" />
+
+        <EditText
+            android:id="@+id/etCycleDelay"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="50"
+            android:textColor="#ffffff"
+            android:backgroundTint="#666666"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- Control Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3. Control"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnStartService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Overlay"
+        android:enabled="false"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnStopService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stop Overlay" />
+
+    <!-- Instructions -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="How to use:\n1. Grant both permissions\n2. Set repetitions and delay\n3. Start overlay and switch to Total Battle\n4. Tap Record, then tap the crypt locations\n5. Tap Stop Rec when done\n6. Tap Play to replay your clicks"
+        android:textColor="#888888"
+        android:textSize="12sp"
+        android:lineSpacingMultiplier="1.3" />
+
+    <!-- Version and Credits -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="v1.3"
+        android:textColor="#00AAFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="by bragon"
+        android:textColor="#888888"
+        android:textSize="12sp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tvGithubLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="github.com/bragonznx/autocrypt"
+        android:textColor="#00AAFF"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Built to be the simplest and lightest as possible."
+        android:textColor="#666666"
+        android:textSize="11sp"
+        android:gravity="center"
+        android:textStyle="italic" />
+
+</LinearLayout>

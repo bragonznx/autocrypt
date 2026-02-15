@@ -10,13 +10,64 @@ A lightweight Android auto-clicker app. Record tap sequences and replay them aut
 - **Persistent Storage**: Recorded sequences are saved and restored on app restart
 - **Countdown Timer**: Shows time remaining before next cycle
 - **Configurable**: Set repetition count and delay between cycles
+- **Samsung Knox Compatible**: Special ADB setup for Samsung devices (see below)
+
+## Samsung Knox Compatibility
+
+**⚠️ Important for Samsung users:**
+
+Samsung Knox security blocks standard accessibility permissions needed by auto-clicker apps. If you have a Samsung device, Autocrypt will automatically detect this and guide you through a **one-time ADB setup**.
+
+### What is ADB Setup?
+
+ADB (Android Debug Bridge) is a tool that lets you grant special permissions to apps via your computer. This is a safe, official Android method used by developers and power users.
+
+### Quick Setup (5 minutes):
+
+1. **Download & install ADB** on your computer:
+   - Windows: [Download Platform Tools](https://developer.android.com/tools/releases/platform-tools)
+   - Mac: `brew install android-platform-tools`
+   - Linux: `sudo apt install adb` or `sudo pacman -S android-tools`
+
+2. **Enable USB Debugging** on your Samsung phone:
+   - Go to Settings > About Phone
+   - Tap "Build Number" 7 times (Developer mode enabled)
+   - Go to Settings > Developer Options
+   - Enable "USB Debugging"
+
+3. **Connect phone to PC** via USB cable
+
+4. **Run the setup script**:
+   - Windows: Download and run [adb-setup-windows.bat](adb-setup-windows.bat)
+   - Mac/Linux: Download and run [adb-setup-mac-linux.sh](adb-setup-mac-linux.sh)
+
+   Or manually run:
+   ```bash
+   adb shell pm grant com.autocrypt android.permission.WRITE_SECURE_SETTINGS
+   ```
+
+5. **Verify** in Autocrypt app by tapping "Test Permission"
+
+6. **Done!** You can disconnect your phone and use Autocrypt normally
+
+### Why is this needed?
+
+Samsung Knox is a security platform that protects your device by blocking apps from simulating touches. The ADB method grants Autocrypt a special permission that allows it to work while maintaining device security.
+
+### Alternatives:
+
+- Use a non-Samsung device for auto-clicking apps
+- Root your device (not recommended - voids warranty)
+
+---
 
 ## Download
 
 Download the latest APK from the [releases](releases/) folder:
 
-- [autocrypt-v1.3.apk](releases/autocrypt-v1.3.apk) - Latest version (version info + GitHub link in app)
-- [autocrypt-v1.2.apk](releases/autocrypt-v1.2.apk) - Previous version
+- [autocrypt-v1.4.apk](releases/autocrypt-v1.4.apk) - **Latest version (Samsung Knox compatible with ADB setup)**
+- [autocrypt-v1.3.apk](releases/autocrypt-v1.3.apk) - Previous version (version info + GitHub link in app)
+- [autocrypt-v1.2.apk](releases/autocrypt-v1.2.apk) - Older version
 
 ---
 
@@ -25,7 +76,7 @@ Download the latest APK from the [releases](releases/) folder:
 ## Step 1: Download the APK
 
 1. On your Android phone, open this page in Chrome (or any browser)
-2. Tap on **[autocrypt-v1.3.apk](releases/autocrypt-v1.3.apk)**
+2. Tap on **[autocrypt-v1.4.apk](releases/autocrypt-v1.4.apk)**
 3. Wait for the download to complete
 4. You'll see a notification "Download complete"
 
@@ -81,6 +132,8 @@ Autocrypt needs the Accessibility Service to perform taps on screen.
 8. The status should now show **"Enabled"** in green
 
 > **Why this permission?** Android only allows apps with Accessibility Service to perform screen taps. This is the same system used by legitimate auto-clickers and assistive apps.
+
+> **⚠️ Samsung users:** If you have a Samsung phone and the accessibility toggle is grayed out or blocked, Samsung Knox is preventing access. The app will automatically show you ADB setup instructions. See the [Samsung Knox Compatibility](#samsung-knox-compatibility) section above for details.
 
 ---
 
